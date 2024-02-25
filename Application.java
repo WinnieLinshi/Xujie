@@ -15,7 +15,12 @@ public class Application {
     // 使用 ConcurrentHashMap 來確保線程安全
     private Map<Integer, Map<String, Object>> members = new ConcurrentHashMap<>();
     private List<Map<String, Object>> orders = Collections.synchronizedList(new ArrayList<>());
-
+    
+    // 在根路徑上返回 "hello world"
+    @GetMapping("/")
+    public String helloWorld() {
+        return "hello world";
+    }
     // 新增會員
     @PostMapping("/members")
     public synchronized Map<String, Object> addMember(@RequestBody Map<String, Object> member) {
