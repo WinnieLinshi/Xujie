@@ -14,6 +14,27 @@ This is a RESTful API example built using Spring Boot, providing functionalities
 - RESTful API
 - Maven
 
+## System Architecture
+
+             ┌───────────────────────┐
+             │      Client-side      │
+             │      Application      │
+             └───────────────────────┘
+                         │
+                         │ HTTP Requests
+                         ▼
+        ┌─────────────────────────────────┐
+        │        Spring Boot API          │
+        │        Application              │
+        └─────────────────────────────────┘
+                         │
+                         │ Processed Data
+                         ▼
+             ┌───────────────────────┐
+             │       Database        │
+             │    (e.g., MySQL)      │
+             └───────────────────────┘
+
 ## Contribution
 
 Contributions and feedback are welcome! Feel free to raise any suggestions or issues in GitHub Issues.
@@ -29,3 +50,4 @@ This project is licensed under the MIT License.
 ## Contact
 
 Winnie Lin Linw2949@gmail.com
+
